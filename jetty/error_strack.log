@@ -1,0 +1,23 @@
+2024-04-02 05:55:58.943 seatunnel bas-seatunnel-test-001 ERROR [tr:,sp:] [main] [SpringApplication.reportFailure():835] - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.IllegalArgumentException: No selectors
+        at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163)
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+        at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745)
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317)
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+        at org.apache.seatunnel.app.SeatunnelApplication.main(SeatunnelApplication.java:36)
+Caused by: java.lang.IllegalArgumentException: No selectors
+        at org.eclipse.jetty.io.SelectorManager.<init>(SelectorManager.java:63)
+        at org.eclipse.jetty.server.ServerConnector$ServerConnectorManager.<init>(ServerConnector.java:600)
+        at org.eclipse.jetty.server.ServerConnector.newSelectorManager(ServerConnector.java:223)
+        at org.eclipse.jetty.server.ServerConnector.<init>(ServerConnector.java:216)
+        at org.eclipse.jetty.server.ServerConnector.<init>(ServerConnector.java:132)
+        at org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.createConnector(JettyServletWebServerFactory.java:200)
+        at org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.createServer(JettyServletWebServerFactory.java:186)
+        at org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory.getWebServer(JettyServletWebServerFactory.java:163)
+        at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+        at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+        ... 8 common frames omitted
