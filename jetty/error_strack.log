@@ -1,3 +1,6 @@
+# jetty-io-9.4.46.v20220331.jar（会设置默认的 selectors）
+# jetty-io-9.3.20.v20170531.jar （如果 selectors < 1 会抛这个异常）
+
 2024-04-02 05:55:58.943 seatunnel bas-seatunnel-test-001 ERROR [tr:,sp:] [main] [SpringApplication.reportFailure():835] - Application run failed
 org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is java.lang.IllegalArgumentException: No selectors
         at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163)
